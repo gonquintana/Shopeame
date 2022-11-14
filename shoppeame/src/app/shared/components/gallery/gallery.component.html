@@ -1,0 +1,18 @@
+
+<div class="target" *ngFor="let item of items">
+
+  <div class="imgBox">
+    <img class="image" src="{{item.image}}" alt="">
+  </div>
+
+<span>
+ <h2 class="txth2">{{item.name}}</h2>
+ <h1 class="txth2 txth2--p">{{item.price}}€</h1>
+ <h5 class="txth2 txth2--h3">{{item.description}}</h5>
+</span>
+<span class="buttonBox">
+  <p class="stars">***{{item.stars}}</p>
+  <button class="btn">Editar</button>
+</span>
+
+</div>

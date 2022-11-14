@@ -1,0 +1,34 @@
+<div class="formBox">
+  <h1 class="h1">Añadir producto</h1>
+  <div class="gemBox">
+
+      <form class="box" [formGroup]="registerForm" (ngSubmit)="submit()">
+        <h4>Nombre del producto</h4>
+        <input placeholder="Por ejemplo: Taza de porcelana" type="text" formControlName="name">
+        <span *ngIf="isSubmit && registerForm.controls['name'].errors && registerForm.controls['name'].errors['required']">debes poner un nombre a tu producto</span>
+        <h4>Precio</h4>
+        <input placeholder="Por ejemplo: 9,50€" type="text" formControlName="price">
+        <span *ngIf="isSubmit && registerForm.controls['price'].errors && registerForm.controls['price'].errors['required']">debes poner un precio a tu producto</span>
+        <h4>Descripción</h4>
+        <input placeholder="Por ejemplo: Perfecta para tus cafés" type="text" formControlName="description">
+        <span *ngIf="isSubmit && registerForm.controls['description'].errors && registerForm.controls['description'].errors['required']">debes dar una descripción de tu producto</span>
+        <h4>Imagen</h4>
+        <input placeholder="Por ejemplo: xxx" type="text" formControlName="routeImg">
+        <span *ngIf="isSubmit && registerForm.controls['routeImg'].errors && registerForm.controls['routeImg'].errors['required']">escribir lo que quieras</span>
+        <h4>Opiniones</h4>
+        <input placeholder="Por ejemplo: 4,28" type="text" formControlName="opinions">
+        <span *ngIf="isSubmit && registerForm.controls['opinions'].errors && registerForm.controls['opinions'].errors['required']">escribir lo que quieras</span>
+
+        <div class="containerBtn">
+        <button type="submit" class="btn">Añadir</button>
+        </div>
+    </form>
+
+    <div class="line"></div>
+    <div class="preview">
+      <h4>preview de producto</h4>
+    </div>
+  </div>
+</div>
+
+
